@@ -1,20 +1,24 @@
 package arrays;
 import java.util.Scanner;
 import java.util.Arrays;
-public class Positions {
+public class Position2 {
 	static int[] assign(int arr[],int n)
 	{
 		Arrays.sort(arr);
-		int ans[]=new int [n];
-		int start=0,end=n-1;
-		
-		for(int i=end;i<n;i++){					//arranging positions
-		    if(i%2!=0)
-			    ans[i]=arr[end--];
-			else
-			    ans[i]=arr[start++];
+		int k=n-1;
+		if(n%2==0)
+			k=n-2;
+		for(int i=k;i>=0;i-=2)
+		{
+			for(int j=i-1;j>=0 ;j--)
+			{
+				int temp=arr[i];
+				arr[i]= arr[j];
+				arr[j]=temp;
+			System.out.println(Arrays.toString(arr));
+			}
 		}
-		return ans;
+		return arr;
 		
 	}
 
