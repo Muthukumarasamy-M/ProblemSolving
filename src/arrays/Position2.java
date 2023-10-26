@@ -5,7 +5,8 @@ public class Position2 {
 	static int[] assign(int arr[],int n)
 	{
 		Arrays.sort(arr);
-		int k=n-1;
+		int k=n-1;									// if odd number rearrange from last number;
+													// even number :rearrange from last before one;
 		if(n%2==0)
 			k=n-2;
 		for(int i=k;i>=0;i-=2)
