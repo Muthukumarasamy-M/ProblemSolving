@@ -1,22 +1,24 @@
 package allpyramids;
+
 import java.util.Scanner;
-public class pyramid5 {
+
+public class Pyramid5 {
 
 	public static void main(String[] args) {
-		Scanner mc= new Scanner(System.in);
+		Scanner mc = new Scanner(System.in);
 		System.out.println("enter the number");
-		int n=mc.nextInt();
-		
-		for(int i=1;i<=n;i++)
-		{
-			for(int k=1;k<=n-i;k++)
+		int n = mc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			for (int k = 1; k <= n - i; k++)
 				System.out.print("  ");
-			for(int j=1;j<=i;j++)
-				System.out.print(j+" ");
-			for(int l=i-1;l>=1;l--)
-				System.out.print(l+" ");
+			for (int j = 1; j <= i; j++)
+				System.out.print(j + " ");
+			for (int l = i - 1; l >= 1; l--)
+				System.out.print(l + " ");
 			System.out.println();
-		}}
+		}
+	}
 }
 /*
  		 		1 

@@ -1,33 +1,29 @@
 package allpatterns;
+
 import java.util.Scanner;
-public class pattern10 {
+
+public class Pattern10 {
 	public static void main(String[] args) {
-		Scanner mc= new Scanner(System.in);
+		Scanner mc = new Scanner(System.in);
 		System.out.println("enter the number");
-		int n=mc.nextInt();
-		for(int i=0;i<2*n;i++)
+		int n = mc.nextInt();
+		for(int i=1;i<=2*n;i++)
 		{
-			for(int j=0;j<2*n;j++)
+			for(int j=1;j<=2*n;j++)
 			{
-			 if(i<n)
-				if((i+j>n-1) && (j< n+i))
-					System.out.print("  ");
+				if(i+j<=n+1||i-j>=n||j-i>=n||i+j>=3*n+1)
+						System.out.print("* ");
 				else
-					System.out.print("* ");
-			 else {
-				 if((j>i-n) && (j<3*n-i-1))
-					 System.out.print("  ");
-				 else 
-					 System.out.print("* ");
-			 }		 
+					System.out.print("  ");
 			}
 			System.out.println();
-	}
+		}
 	}
 }
 
 /*
-
+ enter the number
+5
 * * * * * * * * * * 
 * * * *     * * * * 
 * * *         * * * 
@@ -39,4 +35,5 @@ public class pattern10 {
 * * * *     * * * * 
 * * * * * * * * * * 
 
-*/
+ * 
+ */

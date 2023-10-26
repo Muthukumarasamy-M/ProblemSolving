@@ -2,20 +2,17 @@ package allpatterns;
 
 import java.util.Scanner;
 
-public class pattern6 {
+public class Pattern6 {
 	
 	public static void main(String[] args) {
 	Scanner mc= new Scanner(System.in);
 	System.out.println("enter the number");
 	int n=mc.nextInt();
 
-	for(int i=0;i<n;i++) {
+	for(int i=1;i<=n;i++) {
 			
-		for(int k=0;k<n-1-i;k++)
-			System.out.print(" ");
-		for(int j=0;j<n;j++)
-		{
-			if(i==0||i==n-1||j==0||j==n-1)
+		for (int j = 1; j < 2 * n; j++) {
+			if ((i == 1 && j >= n) || i + j == n + 1 || i + j == 2 * n || (i == n && j <= n))
 				System.out.print("*");
 			else
 				System.out.print(" ");

@@ -2,7 +2,7 @@ package allpyramids;
 
 import java.util.Scanner;
 
-public class pyramid1 {
+public class Pyramid1 {
 
 	public static void main(String[] args) {
 		

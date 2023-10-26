@@ -1,25 +1,27 @@
 package allpyramids;
+
 import java.util.Scanner;
-public class pyramid4 {
+
+public class Pyramid4 {
 
 	public static void main(String[] args) {
-		
-		Scanner mc= new Scanner(System.in);
+
+		Scanner mc = new Scanner(System.in);
 		System.out.println("enter the number");
-		int n=mc.nextInt();
-		
-		for(int i=1;i<=n;i++)
-		{
-			for(int k=1;k<=n-i;k++)
+		int n = mc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			for (int k = 1; k <= n - i; k++)
 				System.out.print("  ");
-			for(int j=n+1-i;j<=n;j++)
-				System.out.print(j+" ");
-			int o=8;
-			for(int l=1;l<i;l++) {
-				System.out.print(o+" ");
+			for (int j = n + 1 - i; j <= n; j++)
+				System.out.print(j + " ");
+			int o = 8;
+			for (int l = 1; l < i; l++) {
+				System.out.print(o + " ");
 				o--;
 			}
-			System.out.println();}	
+			System.out.println();
+		}
 	}
 }
 /*

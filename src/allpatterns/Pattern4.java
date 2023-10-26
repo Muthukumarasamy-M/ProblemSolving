@@ -2,18 +2,16 @@ package allpatterns;
 
 import java.util.Scanner;
 
-public class pattern4 {
+public class Pattern4 {
 
 	public static void main(String[] args) {
-		Scanner mc= new Scanner(System.in);
+		Scanner mc = new Scanner(System.in);
 		System.out.println("enter the number");
-		int n=mc.nextInt();
-		
-		for(int i=0;i<n;i++)
-		{
-			for(int j=0;j<2*n-1;j++)
-			{
-				if(j==n-1-i||i==n-1||j==n-1+i)
+		int n = mc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j < 2 * n; j++) {
+				if (i + j == n + 1 || i == n || j - i == n - 1)
 					System.out.print("*");
 				else
 					System.out.print(" ");
