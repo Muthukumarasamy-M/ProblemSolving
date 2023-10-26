@@ -25,6 +25,7 @@ public class pattern5 {
 		}
 	}
 }
+
 /*
  * 
  * 
@@ -40,4 +41,3 @@ public class pattern5 {
  * 
  * 
  */
-*/
