@@ -1,4 +1,4 @@
-package com.muthukumarasamym.LeetCode;
+package com.muthukumarasamym.leetcode;
 
 import java.util.Scanner;
 
