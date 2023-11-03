@@ -7,12 +7,12 @@ public class DecimalToOctal {
 	private static void octalConversion(int s) {
 		String str="";
 		
-		int []octalchar= {'0','1','2','3','4','5','6','7'};
+		char  []octalchar= {'0','1','2','3','4','5','6','7'};
 		
 		
 		while(s>0) {
 			int rem = s%8;
-			str=octalchar[rem]+str;
+			str= octalchar[rem]+str;
 			s=s/8;
 		}
 		System.out.println(str);
