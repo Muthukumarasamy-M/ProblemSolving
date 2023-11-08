@@ -20,17 +20,19 @@ public class MoveZeros {
 		moveZeroes2(a);
 	}
 	private static void moveZeroes2(int[] a) {
-		int i = 0; 
-        for (int num:a){
-            if(num != 0){
-                a[i] = num;
-                i++;
-            }
-        }
-        while(i<a.length){
-            a[i] = 0;
-            i++;
-        }
+		
+		int index=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]!=0)
+			{
+				int temp=a[i];
+				a[i]=a[index];
+				a[index]=temp;
+				index++;
+			}
+		}
+        
         System.out.println(Arrays.toString(a)+" 2");
 	}
 	
