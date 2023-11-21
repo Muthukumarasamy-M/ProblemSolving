@@ -22,6 +22,7 @@ public class ReplaceIp {
 		}
 		return str;
 	}
+	
 
 	private static String method1(String s) {
 

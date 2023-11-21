@@ -17,18 +17,18 @@ public class MathematicalExpression {
 		int parentheses = 0, count = 0;
 		for (int i = 0; i < s.length(); i++) {
 			char current = s.charAt(i);
-			
+
 			if (Character.isLetter(current)) {
 				count++;
 				continue;
 			} else
 				count = 0;
-			
+
 			if (current == ')')
 				parentheses++;
 			else if (current == '(')
 				parentheses--;
-			
+
 			if (operators.indexOf(current) >= 0 && i < s.length() - 1) {
 				if (Character.isLetterOrDigit(s.charAt(i - 1)) && Character.isLetterOrDigit(s.charAt(i + 1))) {
 					continue;
@@ -38,6 +38,7 @@ public class MathematicalExpression {
 				count = 999;
 			}
 		}
+
 		if (count == 0 && parentheses == 0)
 			System.out.println("Valid");
 		else

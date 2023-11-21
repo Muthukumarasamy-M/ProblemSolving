@@ -7,25 +7,24 @@ public class Jumpled {
 	public static void main(String[] args) {
 		Scanner mc = new Scanner(System.in);
 
-		System.out.print("enter the number");
-		String string = mc.next();
-		Boolean bool = true;
+		System.out.println("enter the number");
+		int num = mc.nextInt(), k = num;
+		boolean bool = true;
 
-		for (int i = 0; i < string.length() - 1; i++) {
+		while (num > 10) {
+			int num1 = num % 10;
+			int num2 = (num / 10) % 10;
 
-			int n1 = Integer.parseInt(string.substring(i, i + 1));
-			int n2 = Integer.parseInt(string.substring(i + 1, i + 2));
-			if (Math.abs(n1 - n2) != 1) {
+			if (((num2-num1) != 1) && ((num1-num2) != 1) ) {
 				bool = false;
 				break;
 			}
+			num /= 10;
 		}
-
 		if (bool == false)
-			System.out.println(string + " is not a jumpled number");
+			System.out.println(k + " not a jumpled number");
 		else
-			System.out.println(string + " is a jumpled number");
+			System.out.println(k + " is a jumpled number");
 
 	}
-
 }
