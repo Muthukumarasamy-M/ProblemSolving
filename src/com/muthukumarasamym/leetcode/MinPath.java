@@ -1,6 +1,6 @@
 package com.muthukumarasamym.leetcode;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class MinPath {
 
@@ -13,7 +13,7 @@ public class MinPath {
 	public static int minPathSum(int[][] grid) {
 
 		int row = grid.length - 1;
-		int col= grid[0].length-1;
+		int col = grid[0].length - 1;
 		for (int i = row; i >= 0; i--) {
 			for (int j = col; j >= 0; j--) {
 
