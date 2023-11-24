@@ -6,6 +6,9 @@ public class MinPath {
 		int grid[][] = { { 1, 2,3 }, { 4, 5, 6 }};
 
 		System.out.println(minPathSum(grid));
+
+		//System.out.println(Integer.MAX_VALUE);
+		System.out.println(-10/-1);
 	}
 
 	public static int minPathSum(int[][] grid) {
