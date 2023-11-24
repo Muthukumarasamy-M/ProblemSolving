@@ -15,25 +15,29 @@ public class SpiralPatten {
 		int[][] arr = new int[n][n];
 		int top = 0, bottom = n - 1, left = 0, right = n - 1, num = 1;
 
-		while (top < bottom || left < right) {
+		while (top <= bottom && left <= right) {
 
 			for (int i = top; i <= bottom; i++) {
 
-				arr[i][left + i] = num++;
+				arr[i][top + i] = num++;
 			}
 			left++;
 			bottom--;
+
+			if (top > bottom && left > right)
+				break;
 
 			for (int i = bottom; i >= top; i--) {
 				arr[i][right] = num++;
 			}
 			right--;
-			
+			if (top > bottom && left > right)
+				break;
+
 			for (int i = right; i >= left; i--) {
-				if (i == left && top != 0)
-					break;
 				arr[top][i] = num++;
 			}
+			left++;
 			top++;
 			bottom--;
 		}

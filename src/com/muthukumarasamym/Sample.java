@@ -16,11 +16,8 @@ public class Sample {
 
 		listInnerPackages(packagePath, "", subpackage);
 
-
 		getClasses(subpackage, packagePath);
-
 	}
-
 	public static void getClasses(List<String> subpackage, String packagePath) {
 		
 	int k=0;
