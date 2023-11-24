@@ -7,8 +7,6 @@ public class MinPath {
 
 		System.out.println(minPathSum(grid));
 
-		//System.out.println(Integer.MAX_VALUE);
-		System.out.println(-10/-1);
 	}
 
 	public static int minPathSum(int[][] grid) {
