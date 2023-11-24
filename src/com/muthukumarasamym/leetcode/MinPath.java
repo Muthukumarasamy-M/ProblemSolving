@@ -1,7 +1,5 @@
 package com.muthukumarasamym.leetcode;
 
-import java.util.*;
-
 public class MinPath {
 
 	public static void main(String[] args) {
