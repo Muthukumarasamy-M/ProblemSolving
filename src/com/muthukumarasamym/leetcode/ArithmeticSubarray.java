@@ -9,9 +9,9 @@ public class ArithmeticSubarray {
 	public static void main(String[] args) {
 		
 		
-		int []nums = {4,6,5,9,3,7};
-		int l[] = {0,0,2};
-		int r[] = {2,3,5};
+		int []nums = {4,1,3,5,2};
+		int l[] = {0};
+		int r[] = {1};
 		System.out.println(checkArithmeticSubarrays(nums,l,r));
 		
 	}
@@ -27,6 +27,7 @@ public class ArithmeticSubarray {
 	public static boolean checkArray(int []array)
 	{
 		Arrays.sort(array);
+		System.out.println(Arrays.toString(array));
 		int diff=Math.abs(array[0]-array[1]);
 		for(int i=1;i<array.length-1;i++)
 		{

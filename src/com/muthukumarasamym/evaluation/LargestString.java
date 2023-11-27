@@ -17,7 +17,7 @@ public class LargestString {
 			strings[i] = mc.next();
 		}
 
-		Arrays.sort(strings,(a, b) -> Integer.compare(a.length(),b.length()));
+		Arrays.sort(strings,(a, b) -> Integer.compare(b.length(),a.length()));
 		
 		for (int i = 0; i < n; i++) {
 			char[] array = strings[i].toCharArray();
