@@ -1,4 +1,4 @@
-package com.muthukumarasamym.recursion;
+package com.muthukumarasamym.leetcode;
 
 import java.util.Arrays;
 
