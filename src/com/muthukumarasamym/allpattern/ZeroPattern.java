@@ -12,7 +12,7 @@ public class ZeroPattern {
 		ZeroPattern z= new ZeroPattern();
 		z.zeropattern(n);
 	}
-
+	
 	private void zeropattern(int n) {
 		
 		
