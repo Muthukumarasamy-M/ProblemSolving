@@ -18,9 +18,8 @@ public class ZeroPattern {
 		
 		char arr[][]= new char[n][n];
 		for (char[] row : arr) {
-            Arrays.fill(row, 'O');
+            Arrays.fill(row, '0');
         }
-		System.out.println(Arrays.deepToString(arr));
 		int top=0,bottom=n-1;
 		
 		while(top<=bottom)

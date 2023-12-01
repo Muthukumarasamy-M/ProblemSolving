@@ -14,9 +14,6 @@ public class MultiplyStrings {
 		{
 			
 		}
-		
-		
-		
 		return num2;
         
     }
