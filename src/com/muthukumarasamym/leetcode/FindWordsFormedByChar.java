@@ -14,7 +14,7 @@ public class FindWordsFormedByChar {
 	}
 
 	public int countCharacters(String[] words, String chars) {
-
+  
 		char[] cha = chars.toCharArray();
 		Arrays.sort(cha);
 		int count = 0;
