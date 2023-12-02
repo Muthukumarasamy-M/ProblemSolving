@@ -39,8 +39,11 @@ public class CheckSubstringInArray {
 
 	private void print(char[][] arr) {
 		for (char[] ch : arr) {
-			for (char c : ch)
+			for (char c : ch) {
+				if(c!='\u0000')
 				System.out.print(c + " ");
+			}
+				
 			System.out.println();
 		}
 
@@ -50,15 +53,15 @@ public class CheckSubstringInArray {
 
 		if (j + 2 < arr[i].length) {
 			if (arr[i][j + 1] == 'O' && arr[i][j + 2] == 'O') {
-				System.out.println("start <" + i + "" + j + ">");
-				System.out.println("end <" + i + "" + (j + 2) + ">");
+				System.out.println("start <" + i + "," + j + ">");
+				System.out.println("end   <" + i + "," + (j + 2) + ">");
 
 			}
 		}
 		if (i + 2 < arr.length) {
 			if (arr[i + 1][j] == 'O' && arr[i + 2][j] == 'O') {
-				System.out.println("start <" + i + "  ," + j + ">");
-				System.out.println("start <" + (i + 2) + " , " + j + ">");
+				System.out.println("start <" + i + "," + j + ">");
+				System.out.println("end   <" + (i + 2) + "," + j + ">");
 			}
 
 		}
