@@ -34,7 +34,7 @@ public class CheckString {
 		for (int i = 0; i < str.length(); i++) {
 			char c = str.charAt(i);
 			if (c >= 'A' && c <= 'Z')
-				arr[32 - ('a' - c)]++;
+				arr[c - 'A']++;
 			else
 				arr[c - 'a']++;
 		}

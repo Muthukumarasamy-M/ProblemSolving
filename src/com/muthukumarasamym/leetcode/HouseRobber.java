@@ -4,7 +4,7 @@ public class HouseRobber {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 1,2,3,1 };
+		int arr[] = { 2,1,1,2 };
 		HouseRobber h = new HouseRobber();
 		System.out.println(h.rob1(arr));
 
@@ -19,10 +19,9 @@ public class HouseRobber {
     int currentMax = 0;
 
 	for (int num : nums) {
-		prevMax = currentMax;
-		int newMax = Math.max(currentMax, prevMax + num);
-		prevMax = currentMax;
-		currentMax = newMax;
+        int newMax = Math.max(currentMax, prevMax + num);
+        prevMax = currentMax;
+        currentMax = newMax;
 	}
 	return currentMax;
 	}

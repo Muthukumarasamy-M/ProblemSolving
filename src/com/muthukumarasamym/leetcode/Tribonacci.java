@@ -1,4 +1,4 @@
-package com.muthukumarasamym.recursion;
+package com.muthukumarasamym.leetcode;
 
 public class Tribonacci {
 
@@ -17,7 +17,6 @@ public class Tribonacci {
 		int sum=0;
 		for(int i=2;i<n;i++)
 		{
-			System.out.println(x+" "+y+" "+z+" "+sum);
 			z=x+y;
 			x=y;
 			y=z;
