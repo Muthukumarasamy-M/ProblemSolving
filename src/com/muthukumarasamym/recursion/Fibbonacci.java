@@ -15,8 +15,7 @@ public class Fibbonacci {
 	}
 
 	private int fibboo(int n, int[] cache) {
-		
-		
+	
 		if(n<=1)
 			return n;
 		if(cache[n]!=0)
@@ -42,8 +41,8 @@ public class Fibbonacci {
 
 		if (n <= 1)
 			return n;
-
-		return fibbo(n - 2) + fibbo(n - 1);
+		System.out.print(n);
+		return  fibbo(n - 1)+fibbo(n - 2) ;
 	}
 
 	

@@ -7,6 +7,8 @@ public class UniqueBinaryString {
 	public static void main(String[] args) {
 		String s[] = { "01", "00" };
 		System.out.println(findDifferentBinaryString(s));
+		String name="Rama";
+		System.out.println("hello".indexOf(5));
 
 	}
 
