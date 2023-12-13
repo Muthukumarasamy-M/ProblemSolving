@@ -6,7 +6,7 @@ public class MyAtoi {
 		String s = "   -4019 with words";
 		MyAtoi m = new MyAtoi();
 		System.out.println(m.myAtoi(s));
-
+		System.out.println("\u20B9");
 	}
 
 	private int myAtoi(String s) {
