@@ -21,18 +21,21 @@ public class BucketSort {
 			max = Math.max(max, num);
 			min = Math.min(min, num);
 		}
-		int bucketcount = max - min + 1;
+		int bucketcount = (max - min) / 10 + 1;
+		System.out.println(bucketcount);
 		List<Integer>[] list = new List[bucketcount];
 		int index = 0;
 		for (int i = 0; i < bucketcount; i++)
 			list[i] = new ArrayList();
 
 		for (int num : arr) {
-			index = num - min;
+			index = (num - min) / 10;
+			System.out.println(index);
 			list[index].add(num);
 		}
 		for (List li : list)
 			Collections.sort(li);
+		
 		int[] sortedArray = new int[arr.length];
 		index = 0;
 		for (List li : list) {

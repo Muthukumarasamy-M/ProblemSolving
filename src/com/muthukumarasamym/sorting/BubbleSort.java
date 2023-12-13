@@ -6,7 +6,7 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 21, 2, 4, 11, 9, 7, 66 };
+		int arr[] = { 21, 2, 4, 11, 9, 7, 66,8 };
 
 		BubbleSort b = new BubbleSort();
 		b.bubblesort(arr);
@@ -17,6 +17,7 @@ public class BubbleSort {
 		boolean flag = false;
 		do {
 			flag = false;
+			System.out.println(Arrays.toString(arr)+"\n");
 			for (int i = 0; i < arr.length - 1; i++) {
 				if (arr[i] > arr[i + 1]) {
 					int temp = arr[i];
@@ -25,9 +26,8 @@ public class BubbleSort {
 					flag = true;
 				}
 			}
-
 		} while (flag != false);
-		System.out.println(Arrays.toString(arr));
+		System.out.println("end"+Arrays.toString(arr));
 	}
 
 }

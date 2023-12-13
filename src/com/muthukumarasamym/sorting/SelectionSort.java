@@ -37,6 +37,7 @@ public class SelectionSort {
 			int temp = arr[min];
 			arr[min] = arr[i];
 			arr[i] = temp;
+			
 		}
 		System.out.println("Ascending\n" + Arrays.toString(arr));
 	}
