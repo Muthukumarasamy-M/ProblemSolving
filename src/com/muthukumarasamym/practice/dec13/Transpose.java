@@ -1,4 +1,4 @@
-package com.muthukumarasamym.practice;
+package com.muthukumarasamym.practice.dec13;
 
 import java.util.Scanner;
 
@@ -39,10 +39,26 @@ public class Transpose {
 				arr[i][j] = arr[j][i];
 				arr[j][i] = temp;
 			}
+			arr[i] = reverse(arr[i]);
+			
 		}
-		System.out.println("transposed Array");
+		System.out.println("rotated Array");
 		print(arr);
 
+	}
+
+	private int[] reverse(int[] arr) {
+
+		int start = 0;
+		int end = arr.length - 1;
+		while (start < end) {
+			int temp = arr[start];
+			arr[start] = arr[end];
+			arr[end] = temp;
+			start++;
+			end--;
+		}
+		return arr;
 	}
 
 }
