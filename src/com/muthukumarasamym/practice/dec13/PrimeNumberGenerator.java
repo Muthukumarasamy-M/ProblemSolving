@@ -2,6 +2,10 @@ package com.muthukumarasamym.practice.dec13;
 
 import java.util.Scanner;
 
+/*
+Prime Number Generator:
+Write a Java program to generate prime numbers within a specified range. 
+Allow the user to input the range and output all prime numbers within that range.*/
 public class PrimeNumberGenerator {
 
 	public static void main(String[] args) {

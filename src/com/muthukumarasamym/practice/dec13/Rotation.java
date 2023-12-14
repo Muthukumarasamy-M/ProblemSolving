@@ -2,6 +2,9 @@ package com.muthukumarasamym.practice.dec13;
 
 import java.util.Scanner;
 
+/*Matrix Rotation:
+Rotate a given square matrix by 90 degrees in the clockwise direction.
+Implement the rotation in-place without using any additional data structures.*/
 public class Rotation {
 
 	public static void main(String[] args) {
@@ -15,7 +18,7 @@ public class Rotation {
 			for (int j = 0; j < col; j++)
 				arr[i][j] = mc.nextInt();
 		}
-		Transpose t = new Transpose();
+		Rotation t = new Rotation();
 		System.out.println("original array ");
 		print(arr);
 		t.transpose(arr);
