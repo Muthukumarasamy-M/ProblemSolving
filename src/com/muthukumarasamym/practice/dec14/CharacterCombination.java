@@ -1,5 +1,6 @@
 package com.muthukumarasamym.practice.dec14;
 
+	//Write a program to find the combination of all the characters in a string.
 public class CharacterCombination {
 
 	public static void main(String[] args) {

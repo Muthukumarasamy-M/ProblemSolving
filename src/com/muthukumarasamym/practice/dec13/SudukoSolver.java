@@ -1,5 +1,9 @@
 package com.muthukumarasamym.practice.dec13;
 
+/*
+Sudoku Solver:
+Implement a Java program to solve a given Sudoku puzzle. 
+The input will be a partially filled 9x9 grid, and the output should be the solved Sudoku*/
 public class SudukoSolver {
 
 	public static void main(String[] args) {

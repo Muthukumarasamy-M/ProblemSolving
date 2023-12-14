@@ -2,6 +2,10 @@ package com.muthukumarasamym.practice.dec14;
 
 import java.util.Stack;
 
+/*Evaluate Postfix Expression:
+ssCreate a Java function to evaluate a given postfix expression. 
+The expression is provided as a string, and the operators include '+', '-', '*', and '/'.
+Use a stack to perform the evaluation.*/
 public class Postfix {
 
 	public static void main(String[] args) {
@@ -20,12 +24,13 @@ public class Postfix {
 				stack.push(c - '0');
 			} else {
 				int operand1 = stack.pop();
+
 				int operand2 = stack.pop();
 				int result = findresult(operand1, operand2, c);
 				stack.push(result);
 			}
 		}
-		System.out.println("OUTPUT : "+stack.pop());
+		System.out.println("OUTPUT : " + stack.pop());
 	}
 
 	private int findresult(int operand1, int operand2, char c) {
@@ -40,7 +45,7 @@ public class Postfix {
 		case '/':
 			return operand1 / operand2;
 		default:
-             throw new IllegalArgumentException("Invalid operator: " + c);
+			throw new IllegalArgumentException("Invalid operator: " + c);
 		}
 	}
 

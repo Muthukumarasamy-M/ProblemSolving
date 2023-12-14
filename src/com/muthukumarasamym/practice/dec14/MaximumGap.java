@@ -2,6 +2,10 @@ package com.muthukumarasamym.practice.dec14;
 
 import java.util.Arrays;
 
+/*Maximum Gap in Array:
+Given an unsorted array, find the maximum difference between the successive 
+elements in its sorted form.*/
+
 public class MaximumGap {
 
 	public static void main(String[] args) {

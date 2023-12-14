@@ -2,7 +2,7 @@ package com.muthukumarasamym.practice.dec13;
 
 import java.util.Scanner;
 
-public class Transpose {
+public class Rotation {
 
 	public static void main(String[] args) {
 

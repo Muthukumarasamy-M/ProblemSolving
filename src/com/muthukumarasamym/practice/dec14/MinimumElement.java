@@ -2,6 +2,7 @@ package com.muthukumarasamym.practice.dec14;
 
 import java.util.Arrays;
 
+//Given an unsorted array, write a Java function to find the kth smallest element in the array.
 public class MinimumElement {
 
 	public static void main(String[] args) {

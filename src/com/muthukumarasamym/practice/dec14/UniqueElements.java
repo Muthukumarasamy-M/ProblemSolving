@@ -5,6 +5,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/*Write a Java function to remove duplicates from an ArrayList of
+ * 	integers.The output should be an ArrayList containing unique elements
+ * in the order they first appeared.
+ */
 public class UniqueElements {
 
 	public static void main(String[] args) {

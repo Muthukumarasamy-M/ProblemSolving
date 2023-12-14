@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/*Sublist Search:
+Write a Java function to check if an ArrayList is a sublist of another ArrayList.
+Return true if it is, and false otherwise*/
+
 public class Sublist {
 
 	public static void main(String[] args) {

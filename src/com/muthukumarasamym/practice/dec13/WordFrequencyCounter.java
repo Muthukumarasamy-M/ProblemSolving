@@ -5,6 +5,9 @@ import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+/*Word Frequency Counter:
+Design a program that takes a paragraph of text as input and outputs the frequency of each 
+word.Ignore punctuation and consider case-insensitivity.*/
 public class WordFrequencyCounter {
 
 	public static void main(String[] args) {

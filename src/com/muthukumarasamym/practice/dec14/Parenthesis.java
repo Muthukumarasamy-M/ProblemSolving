@@ -22,19 +22,20 @@ public class Parenthesis {
 	private void generateParenthesis(int n, int i, int j, StringBuilder string, List<String> list) {
 
 		if (string.length() == 2 * n) {
+			System.out.println(string);
 			list.add(string.toString());
 			return;
 		}
 		if (i < n) {
 			string.append("(");
-			System.out.println(string);
+			System.out.println(string +" i "+i);
 			generateParenthesis(n, i + 1, j, string, list);
 			string.deleteCharAt(string.length() - 1);
 
 		}
 		if (j < i) {
 			string.append(")");
-			System.out.println(string);
+			System.out.println(string+" j "+j);
 			generateParenthesis(n, i, j + 1, string, list);
 			string.deleteCharAt(string.length() - 1);
 		}

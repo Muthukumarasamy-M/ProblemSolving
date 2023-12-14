@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/*Pascal's Triangle:
+Create a program that generates and prints the first n rows of Pascal's Triangle.
+Each number in the triangle is the sum of the two directly above it.*/
 public class PascalTriangle {
 
 	public static void main(String[] args) {
