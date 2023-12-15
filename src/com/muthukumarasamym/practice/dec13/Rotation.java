@@ -43,7 +43,7 @@ public class Rotation {
 				arr[j][i] = temp;
 			}
 			arr[i] = reverse(arr[i]);
-			
+
 		}
 		System.out.println("rotated Array");
 		print(arr);

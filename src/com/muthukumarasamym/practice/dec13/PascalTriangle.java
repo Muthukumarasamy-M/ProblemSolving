@@ -33,6 +33,7 @@ public class PascalTriangle {
 
 			}
 			prev = cur;
+
 			list.add(cur);
 		}
 		print(list);
@@ -43,7 +44,7 @@ public class PascalTriangle {
 
 		int index = 0;
 		for (List li : list) {
-			for (int k = 0; k < list.size() - index; k++)
+			for (int k = 0; k < list.size() - index; k++)//space loop
 				System.out.printf("%2s","");
 			for (Object num : li)
 				System.out.printf("%4d",num);
