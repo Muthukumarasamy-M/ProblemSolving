@@ -22,6 +22,7 @@ public class CharacterCombination {
 		System.out.println("{" + stringb.toString() + "}");
 
 		for (int i = index; i < s.length(); i++) {
+			
 			stringb.append(s.charAt(i));
 
 			generate(s, i + 1, stringb);
