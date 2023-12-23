@@ -23,11 +23,11 @@ public class Pit05 {
 			System.out.println("Position of pit " + (i + 1) + " :");
 			int x = mc.nextInt();
 			int y = mc.nextInt();
-			set.add(x + "," + y);
+			set.add((x-1) + "," + (y-1));
 		}
 
 		for (int i = arow - 1; i >= grow - 1; i--) {
-			for (int j = acol; j < col; j++) {
+			for (int j = acol-1; j < col; j++) {
 				if (set.contains(i + "," + j)) {
 					arr[i][j] = 999;
 					continue;
