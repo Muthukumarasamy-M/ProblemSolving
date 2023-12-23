@@ -25,17 +25,11 @@ public class WordProblem {
 		for (int i = 0; i < index || n < s.length(); i++, n++) {
 			if (i < index)
 				word1 += s.charAt(i);
+			
 			if (n < s.length())
 				word2 += s.charAt(n);
+			
 			System.out.println(word1 + word2);
 		}
 	}
-	/*
-	 * HA 
-	 * HAAG
-	 * HASAGI 
-	 * HASHAGIL 
-	 * HASHAGILE
-	 */
-
 }
