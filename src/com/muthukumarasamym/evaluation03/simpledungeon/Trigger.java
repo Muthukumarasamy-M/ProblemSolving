@@ -23,10 +23,10 @@ public class Trigger {
 		if (adventuremin > monstermin) {
 			int Adventotrigger = Math.abs(arow - trow) + Math.abs(acol - tcol);
 			int triggertogold = Math.abs(trow - grow) + Math.abs(tcol - gcol);
-			System.out.println("minimum number of steps is  : " + (Adventotrigger + triggertogold));
+			System.out.println("Minimum number of steps is  : " + (Adventotrigger + triggertogold));
 
 		} else {
-			System.out.println("minimum number of steps is  : " + adventuremin);
+			System.out.println("Minimum number of steps is  : " + adventuremin);
 
 		}
 
