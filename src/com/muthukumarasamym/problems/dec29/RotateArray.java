@@ -23,6 +23,10 @@ public class RotateArray {
 
 	private void find(int[] arr, int rot, int num) {
 
+		if (arr.length == 0) {
+			System.out.println("No output");
+			return;
+		}
 		if (rot >= num) {
 			rot = rot % num;
 
