@@ -1,49 +1,52 @@
 package com.muthukumarasamym.evaluation03.simpledungeon;
 
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
-import java.util.Set;
 
-public class MonsterPit06 {
+public class Trigger04 {
 
 	public static void main(String[] args) {
+
 		Scanner mc = new Scanner(System.in);
 		System.out.println("Dimension of Dungeon (row X col) : ");
 		int row = mc.nextInt(), col = mc.nextInt();
-		int arr[][] = new int[row][col];
 		System.out.println("Position of adventurer : ");
 		int arow = mc.nextInt(), acol = mc.nextInt();
 		System.out.println("Postion of Monster : ");
 		int mrow = mc.nextInt(), mcol = mc.nextInt();
+		System.out.println("Position of Trigger : ");
+		int trow = mc.nextInt(), tcol = mc.nextInt();
 		System.out.println("Position of Gold : ");
 		int grow = mc.nextInt(), gcol = mc.nextInt();
-		System.out.println("Enter the number of pits : ");
-		int n = mc.nextInt();
-		for (int i = 0; i < n; i++) {
-			System.out.println("Position of pit " + (i + 1) + " :");
-			int x = mc.nextInt();
-			int y = mc.nextInt();
-			arr[x - 1][y - 1] = 1;
+		if (arow < 1 || arow > row || acol < 1 || acol > col || mrow < 1 || mrow > row || mcol < 1 || mcol > col
+				|| grow < 1 || grow > row || gcol < 1 || gcol > col || trow < 1 || tcol > col) {
+			System.out.println("Invalid input. Positions should be within the dungeon boundaries.");
+			return;
 		}
+		int[][] arr = new int[row][col];
 		Point adventureStart = new Point(arow - 1, acol - 1, 0);
 		Point goldEnd = new Point(grow - 1, gcol - 1, 0);
 		Point monsterStart = new Point(mrow - 1, mcol - 1, 0);
 		Point[][] parent = new Point[row][col];
-		int adventuremin = shortestPath(arr, adventureStart, goldEnd, parent, 'a');
-		int monstermin = shortestPath(arr, monsterStart, goldEnd, parent, 'm');
+		int adventuremin = shortestPath(arr, adventureStart, goldEnd, parent);
+		int monstermin = shortestPath(arr, monsterStart, goldEnd, parent);
 		System.out.println(adventuremin + " " + monstermin);
-		if (monstermin < adventuremin) {
-			System.out.println("No possible solution ");
+		if (adventuremin > monstermin) {
+			Point trigger = new Point(trow - 1, tcol - 1, 0);
+			Point[][] parent1 = new Point[row][col];
+			int Adventotrigger = shortestPath(arr, adventureStart, trigger, parent1);
+			int triggertogold = shortestPath(arr, trigger, goldEnd, parent1);
+			System.out.println("Minimum number of steps (Adventurer -> trigger -> gold) is  : "
+					+ (Adventotrigger + triggertogold));
 		} else {
+			System.out.println("Minimum number of steps is (Adventurer -> gold) : " + adventuremin);
 
-			System.out.println("Minimum number of steps : " + adventuremin);
 		}
 
 	}
 
-	public static int shortestPath(int[][] matrix, Point start, Point end, Point[][] parent, char c) {
+	public static int shortestPath(int[][] matrix, Point start, Point end, Point[][] parent) {
 		int rows = matrix.length;
 		int cols = matrix[0].length;
 
@@ -66,13 +69,7 @@ public class MonsterPit06 {
 				int newX = current.x + dx[i];
 				int newY = current.y + dy[i];
 
-				boolean isValidMove = isValid(newX, newY, rows, cols) && !visited[newX][newY];
-
-				if (c == 'a' && isValidMove && matrix[newX][newY] == 0) {
-					queue.add(new Point(newX, newY, current.distance + 1));
-					visited[newX][newY] = true;
-					parent[newX][newY] = current;
-				} else if (c == 'm' && isValidMove && (matrix[newX][newY] == 0 || matrix[newX][newY] == 1)) {
+				if (isValid(newX, newY, rows, cols) && !visited[newX][newY] && matrix[newX][newY] == 0) {
 					queue.add(new Point(newX, newY, current.distance + 1));
 					visited[newX][newY] = true;
 					parent[newX][newY] = current;
@@ -81,6 +78,19 @@ public class MonsterPit06 {
 		}
 
 		return -1; // No path found
+	}
+
+	public static void printPointArray(Point[][] array) {
+		int rows = array.length;
+		int cols = array[0].length;
+
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				Point point = array[i][j];
+				System.out.print("(" + (point.x + 1) + ", " + (point.y + 1) + ", " + point.distance + ") ");
+			}
+			System.out.println();
+		}
 	}
 
 	private static boolean isValid(int newX, int newY, int rows, int cols) {
@@ -98,4 +108,5 @@ public class MonsterPit06 {
 		System.out.println("(" + (start.x + 1) + ", " + (start.y + 1) + ")"); // Print the starting point
 		System.out.println();
 	}
+
 }
