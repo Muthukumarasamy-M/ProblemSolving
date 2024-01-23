@@ -1,0 +1,26 @@
+package com.muthukumarasamym.leetcode;
+
+import java.util.Arrays;
+
+public class MiniDifferenceInThreeMoves {
+
+	public static void main(String[] args) {
+
+		int array[] = { 3, 100, 20 };
+
+		System.out.println(minDifference(array));
+	}
+
+	public static int minDifference(int[] nums) {
+		int n = nums.length;
+        if(n<=4) return 0;
+        Arrays.sort(nums);
+
+        int a = nums[n-4]-nums[0];  
+        int b = nums[n-3]-nums[1];  
+        int c = nums[n-2]-nums[2];  
+        int d = nums[n-1]-nums[3];  
+
+        return Math.min(a,Math.min(b,Math.min(c,d)));
+	}
+}
