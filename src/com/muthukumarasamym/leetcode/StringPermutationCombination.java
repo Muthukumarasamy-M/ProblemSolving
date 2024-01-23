@@ -13,7 +13,8 @@ public class StringPermutationCombination {
 
     // Generate permutations of a string
     private static void generatePermutations(String prefix, String remaining) {
-        int n = remaining.length();
+        
+    	int n = remaining.length();
         if (n == 0) {
             System.out.print(prefix + " ");
         } else {
