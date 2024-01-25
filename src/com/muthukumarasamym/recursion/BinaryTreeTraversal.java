@@ -1,11 +1,11 @@
 package com.muthukumarasamym.recursion;
 
 class Node {
-	int key;
+	int data;
 	Node left, right;
 
 	public Node(int item) {
-		key = item;
+		data = item;
 		left = right = null;
 	}
 }
@@ -23,7 +23,7 @@ public class BinaryTreeTraversal {
 		}
 		inorder(node.left);
 
-		System.out.print(node.key + " ");
+		System.out.print(node.data + " ");
 
 		inorder(node.right);
 	}
@@ -33,7 +33,7 @@ public class BinaryTreeTraversal {
 			return;
 		}
 
-		System.out.print(node.key + " ");
+		System.out.print(node.data + " ");
 		preOrder(node.left);
 		preOrder(node.right);
 	}
@@ -44,7 +44,7 @@ public class BinaryTreeTraversal {
 		}
 		postOrder(node.left);
 		postOrder(node.right);
-		System.out.print(node.key + " ");
+		System.out.print(node.data + " ");
 
 	}
 
