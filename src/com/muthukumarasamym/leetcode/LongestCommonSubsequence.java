@@ -1,5 +1,6 @@
 package com.muthukumarasamym.leetcode;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class LongestCommonSubsequence {
@@ -30,6 +31,7 @@ public class LongestCommonSubsequence {
 
 			}
 		}
+		System.out.println(Arrays.deepToString(dp));
 		return dp[m][n];
 	}
 

@@ -1,4 +1,4 @@
-package com.muthukumarasamym.problems.dec29;
+package com.muthukumarasamym.practice.dec29;
 
 import java.util.Arrays;
 import java.util.Scanner;
